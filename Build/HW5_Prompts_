@@ -1,0 +1,9 @@
+Write a C program for Lab 2 Homework Q5 that reads a 32-bit hexadecimal value.
+
+The program must count the number of leading 0 bits in the 4-byte binary number.
+
+Start checking from the most significant bit and stop counting when the first 1 bit is found.
+
+Make sure the program correctly handles a value of 0, where all 32 bits are zero.
+
+Check my hw5.c program against the requirements of Lab 2 Homework Q5.
