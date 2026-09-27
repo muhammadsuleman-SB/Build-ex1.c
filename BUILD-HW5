@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdint.h>
+#include <inttypes.h>
+
+int main(void)
+{
+    uint32_t value;
+
+    int leadingZeros = 0;
+
+    printf("Enter a 32-bit hexadecimal value: ");
+    scanf("%" SCNx32, &value);
+
+    for (int i = 31; i >= 0; i--)
+    {
+        if ((value >> i) & 1u)
+        {
+            break;
+        }
+
+        leadingZeros++;
+    }
+
+    printf("Number of leading zeros: %d\n", leadingZeros);
+
+    return 0;
+}
