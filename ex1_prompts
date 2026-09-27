@@ -1,0 +1,9 @@
+Explain how the sizeof operator works for the unsigned C types in this lab and how the byte size relates to the number of bits and overflow.
+
+Explain the difference between the C printf format specifiers %x, %d, and %c when displaying unsigned char hexadecimal values.
+
+I manually calculated the AND, OR, and XOR results for 0x12 and 0xda and for 0x3b and 0xbe. Explain how I can check my work bit by bit without calculating the answers for me.
+
+Explain how to set the lowest 4 bits of an unsigned char to 1111 using a bitwise mask.
+
+Check whether my ex1.c program follows the requirements of the Lab 2 Part 1 assignment.
