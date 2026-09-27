@@ -1,0 +1,11 @@
+Write a C program for Lab 2 Homework Q3 that reads one hexadecimal number and a value p between 0 and 8.
+
+The program must create a mask where the most significant p bits are 0 and the least significant 8-p bits are 1.
+
+Build the mask using shift operators instead of using a fixed mask.
+
+Make sure the program handles p = 0 and p = 8 correctly.
+
+Display the resulting value using printf("%x").
+
+Check my hw3.c program against the requirements of Lab 2 Homework Q3.
