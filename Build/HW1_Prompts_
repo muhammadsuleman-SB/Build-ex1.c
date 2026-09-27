@@ -1,0 +1,15 @@
+Write a C program for the Lab 2 homework bit command interpreter. The program should read a hexadecimal value into an unsigned char variable, then read two int values p and n, both less than 8.
+
+The program needs to repeatedly read a command character and execute the five commands from the assignment. The commands are S, R, F, D, and I.
+
+S should set the n bits starting at position p to 1. R should reset the n bits starting at position p to 0. F should flip the n bits starting at position p. D should display the variable in decimal. I should read a new hexadecimal value.
+
+Make sure that after S, R, and F, the result is displayed using printf("%x") as required by the assignment.
+
+Make sure the operations are chained so each command operates on the output of the previous command rather than the original input.
+
+Explain how to create a mask containing n consecutive 1 bits starting at position p.
+
+Check that running the F command twice in a row returns the value to its original value.
+
+Check my hw1.c program against all of the requirements in the Lab 2 assignment.
