@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main(void)
+{
+    unsigned int input;
+    unsigned char value;
+    unsigned char mask;
+    int p;
+
+    printf("Enter hexadecimal value: ");
+    scanf("%x", &input);
+
+    value = (unsigned char)input;
+
+    printf("Enter p: ");
+    scanf("%d", &p);
+
+    if (p == 8)
+    {
+        mask = 0x00;
+    }
+    else
+    {
+        mask = (unsigned char)((1u << (8 - p)) - 1u);
+    }
+
+    value = value & mask;
+
+    printf("%x\n", value);
+
+    return 0;
+}
