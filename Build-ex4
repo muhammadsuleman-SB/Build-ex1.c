@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main(void)
+{
+    unsigned char first;
+    unsigned char second;
+
+    unsigned int input1;
+    unsigned int input2;
+
+    int p;
+    int n;
+
+    printf("Enter first hexadecimal value: ");
+    scanf("%x", &input1);
+
+    printf("Enter second hexadecimal value: ");
+    scanf("%x", &input2);
+
+    first = (unsigned char)input1;
+    second = (unsigned char)input2;
+
+    printf("Enter p and n: ");
+    scanf("%d %d", &p, &n);
+
+    if (n == 0)
+    {
+        printf("%x\n", first);
+        return 0;
+    }
+
+    unsigned int fieldMask;
+    unsigned int newBits;
+
+    fieldMask = ((1u << n) - 1u) << p;
+
+    newBits = (second & ((1u << n) - 1u)) << p;
+
+    first = (unsigned char)(first & (unsigned char)(~fieldMask));
+    first = (unsigned char)(first | newBits);
+
+    printf("%x\n", first);
+
+    return 0;
+}
