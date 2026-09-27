@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(void)
+{
+    unsigned int input;
+    unsigned char value;
+
+    printf("Enter hexadecimal value: ");
+    scanf("%x", &input);
+
+    value = (unsigned char)input;
+
+    value = value & 0x3F;
+
+    value = value | 0x03;
+
+    printf("%x\n", value);
+
+    return 0;
+}
