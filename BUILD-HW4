@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdint.h>
+#include <inttypes.h>
+
+int main(void)
+{
+    uint32_t value;
+
+    int ones = 0;
+    int zeros = 0;
+
+    printf("Enter a 32-bit hexadecimal value: ");
+    scanf("%" SCNx32, &value);
+
+    for (int i = 31; i >= 0; i--)
+    {
+        if ((value >> i) & 1u)
+        {
+            ones++;
+        }
+        else
+        {
+            zeros++;
+        }
+    }
+
+    printf("Number of 1 bits: %d\n", ones);
+    printf("Number of 0 bits: %d\n", zeros);
+
+    return 0;
+}
