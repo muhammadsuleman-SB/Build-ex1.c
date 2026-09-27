@@ -1,0 +1,9 @@
+Write a C program for Lab 2 Homework Q2 that reads one hexadecimal number using scanf("%x").
+
+The program must set the most significant 2 bits of the number to 00 and the least significant 2 bits to 11.
+
+Use one AND mask to set the most significant 2 bits to 00 and one OR mask to set the least significant 2 bits to 11, as required by the assignment.
+
+Display the resulting value using printf("%x").
+
+Check my hw2.c program against the requirements of Lab 2 Homework Q2.
