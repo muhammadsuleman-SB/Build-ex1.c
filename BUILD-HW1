@@ -1,0 +1,63 @@
+#include <stdio.h>
+
+int main(void)
+{
+    unsigned char value;
+    unsigned int input;
+    int p;
+    int n;
+    char command;
+
+    printf("Enter hexadecimal value: ");
+    scanf("%x", &input);
+
+    value = (unsigned char)input;
+
+    printf("Enter p and n: ");
+    scanf("%d %d", &p, &n);
+
+    while (scanf(" %c", &command) == 1)
+    {
+        unsigned int mask;
+
+        if (n == 0)
+        {
+            mask = 0;
+        }
+        else
+        {
+            mask = ((1u << n) - 1u) << p;
+        }
+
+        if (command == 'S')
+        {
+            value = (unsigned char)(value | mask);
+
+            printf("%x\n", value);
+        }
+        else if (command == 'R')
+        {
+            value = (unsigned char)(value & ~mask);
+
+            printf("%x\n", value);
+        }
+        else if (command == 'F')
+        {
+            value = (unsigned char)(value ^ mask);
+
+            printf("%x\n", value);
+        }
+        else if (command == 'D')
+        {
+            printf("%d\n", value);
+        }
+        else if (command == 'I')
+        {
+            scanf("%x", &input);
+
+            value = (unsigned char)input;
+        }
+    }
+
+    return 0;
+}
